@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "f497e90d-2ce2-4386-b6fd-75356da9b8f9",
+		"name": "Prueba Api Rest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://api-uat.kushkipagos.com/v1/charges/706151712800828386",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Private-Merchant-Id",
+						"value": "ec81ea8e9996445db97723ccfa19544e",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"fullResponse\": true,\r\n  \"amount\": {\r\n    \"subtotalIva\": 0 ,\r\n    \"subtotalIva0\": 49.99,\r\n    \"ice\": 0,\r\n    \"iva\": 0,\r\n    \"currency\": \"USD\"\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-uat.kushkipagos.com/v1/charges/706151712800828386",
+					"protocol": "https",
+					"host": [
+						"api-uat",
+						"kushkipagos",
+						"com"
+					],
+					"path": [
+						"v1",
+						"charges",
+						"706151712800828386"
+					]
+				},
+				"description": "Request Void Transaction"
+			},
+			"response": []
+		},
+		{
+			"name": "https://api-uat.kushkipagos.com/analytics/v1/transactions-list?from=2022-01-29T14:36:53.780Z&to=2022-01-31T14:36:53.780Z&transaction_status=APPROVAL&card_type=Credit&created=2022-01-31T05:16:56.000Z",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Private-Merchant-Id",
+						"value": "ec81ea8e9996445db97723ccfa19544e",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api-uat.kushkipagos.com/analytics/v1/transactions-list?from=2022-01-29T14:36:53.780Z&to=2022-01-31T14:36:53.780Z&transaction_status=APPROVAL&card_type=Credit&created=2022-01-31T05:16:56.000Z",
+					"protocol": "https",
+					"host": [
+						"api-uat",
+						"kushkipagos",
+						"com"
+					],
+					"path": [
+						"analytics",
+						"v1",
+						"transactions-list"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2022-01-29T14:36:53.780Z"
+						},
+						{
+							"key": "to",
+							"value": "2022-01-31T14:36:53.780Z"
+						},
+						{
+							"key": "transaction_status",
+							"value": "APPROVAL"
+						},
+						{
+							"key": "card_type",
+							"value": "Credit"
+						},
+						{
+							"key": "approval_code",
+							"value": "000000",
+							"disabled": true
+						},
+						{
+							"key": "created",
+							"value": "2022-01-31T05:16:56.000Z"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
